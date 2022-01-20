@@ -1,0 +1,105 @@
+import java.*;
+import java.util.Random;
+import java.util.Scanner;
+
+public class LotteryTicketGen {
+    public static void main(String[] args) {
+        Random Randy = new Random(); // generate randomization
+        int[] ourLuckyNumber = new int[3]; // our lottery number string of 3
+        for (int i = 0; i < 3; ++i) {
+            ourLuckyNumber[i] = Randy.nextInt(33) + 1; // gets our randomized string of 33
+        }
+
+        /*
+         * Since the following question asks what we'd do if the
+         * user wants to purchase 5 tickets we'll setup the feature
+         * in which a user purchases 5.
+         */
+
+        // let's setup our tickets
+        int[] ticketOne = new int[3]; // ticketOne will be a set of 3 numbers
+        int[] ticketTwo = new int[3]; // ticketTwo will be a set of 3 numbers
+        int[] ticketThree = new int[3]; // ticketThree will be a set of 3 numbers
+        int[] ticketFour = new int[3]; // ticketFour will be a set of 3 numbers
+        int[] ticketFive = new int[3]; // ticketFive will be a set of 3 numbers
+
+        // the game is setup for 3's, so we'll loop it for each of the clients inputs
+        Scanner scnr = new Scanner(System.in); // Scanner for user input
+        // ticket 1
+        System.out.println("Please enter your desired 3 numbers for your first ticket"); // Print line for user to input
+                                                                                         // values
+        for (int i = 0; i < 3; i++) { // for loop, setting our tickets to users input
+            ticketOne[i] = scnr.nextInt(); // setting ticketOne value to users input
+        }
+        // ticket 2
+        System.out.println("Please enter your desired 3 numbers for your second ticket"); // Print line for user to
+                                                                                          // input values
+        for (int i = 0; i < 3; i++) { // for loop, setting our tickets to users input
+            ticketTwo[i] = scnr.nextInt(); // setting ticketTwo value to users input
+        }
+        // ticket 3
+        System.out.println("Please enter your desired 3 numbers for your third ticket"); // Print line for user to input
+                                                                                         // values
+        for (int i = 0; i < 3; i++) { // for loop, setting our tickets to users input
+            ticketThree[i] = scnr.nextInt(); // setting ticketThree value to users input
+        }
+        // ticket 4
+        System.out.println("Please enter your desired 3 numbers for your fourth ticket"); // Print line for user to
+                                                                                          // input values
+        for (int i = 0; i < 3; i++) { // for loop, setting our tickets to users input
+            ticketFour[i] = scnr.nextInt(); // setting ticketFour value to users input
+        }
+        // ticket 5
+        System.out.println("Please enter your desired 3 numbers for your fifth ticket"); // Print line for user to input
+                                                                                         // values
+        for (int i = 0; i < 3; i++) { // for loop, setting our tickets to users input
+            ticketFive[i] = scnr.nextInt(); // setting ticketFive value to users input
+        }
+        // now let us check the users input with our lottery number from above
+        int winnerChickenDinner1 = 0;
+        for (int x = 0; x < 3; x++) {
+            for (int i = 0; i < 3; i++) {
+                if (ourLuckyNumber[i] == ticketOne[x]) {
+                    winnerChickenDinner1++;
+                }
+            }
+        }
+        System.out.println("Your first ticket matches " + winnerChickenDinner1 + " of 3.");
+        int winnerChickenDinner2 = 0;
+        for (int x = 0; x < 3; x++) {
+            for (int i = 0; i < 3; i++) {
+                if (ourLuckyNumber[i] == ticketTwo[x]) {
+                    winnerChickenDinner2++;
+                }
+            }
+        }
+        System.out.println("Your second ticket matches " + winnerChickenDinner2 + " of 3.");
+        int winnerChickenDinner3 = 0;
+        for (int x = 0; x < 3; x++) {
+            for (int i = 0; i < 3; i++) {
+                if (ourLuckyNumber[i] == ticketThree[x]) {
+                    winnerChickenDinner3++;
+                }
+            }
+        }
+        System.out.println("Your third ticket matches " + winnerChickenDinner3 + " of 3.");
+        int winnerChickenDinner4 = 0;
+        for (int x = 0; x < 3; x++) {
+            for (int i = 0; i < 3; i++) {
+                if (ourLuckyNumber[i] == ticketFour[x]) {
+                    winnerChickenDinner4++;
+                }
+            }
+        }
+        System.out.println("Your fourth ticket matches " + winnerChickenDinner4 + " of 3.");
+        int winnerChickenDinner5 = 0;
+        for (int x = 0; x < 3; x++) {
+            for (int i = 0; i < 3; i++) {
+                if (ourLuckyNumber[i] == ticketFive[x]) {
+                    winnerChickenDinner5++;
+                }
+            }
+        }
+        System.out.println("Your fifth ticket matches " + winnerChickenDinner5 + " of 3.");
+    }
+}
