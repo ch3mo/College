@@ -1,0 +1,45 @@
+#Asking the user to input customer payment
+userChange = eval(input("Input change here: "))
+
+#Quarter value
+Quarter = 0 
+#Dime value
+Dime = 0
+#Nickel value
+Nickel = 0
+#Penny value
+Penny = 0 
+
+#change amount header
+print("\nChange simplified: ") 
+
+
+#Breaking change into Quarters
+Quarter = userChange // 25 
+#sends message to user amount of quarters
+print(Quarter, " Quarters") 
+#Setting change to amount of quarters
+userChange = userChange % 25  
+
+#Breaking change into Dimes
+Dime = userChange // 10 
+#sends message to user amount of nickels
+print(Dime, " Dimes") 
+#Setting change to amount of Dimes
+userChange = userChange % 10 
+
+#Breaking change into Nickels
+Nickel = userChange // 5 
+#sends message to user amount of nickels
+print(Nickel, " Nickels") 
+#Setting change to amount of Nickels
+userChange = userChange % 5 
+
+#Breaking change into Pennies
+Penny = userChange 
+#sends message to user amount of pennies
+print(Penny, " Pennies") 
+
+
+
+#CHEMO wuz here :P
